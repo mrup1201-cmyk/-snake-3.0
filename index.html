@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<title>Snake 3.0</title>
+</head>
+
+<body>
+
+<div id="menu" class="screen">
+    <h1>🐍 Snake 3.0</h1>
+    <button onclick="startGame()">Играть</button>
+    <button onclick="openSettings()">Настройки</button>
+    <div id="best">Рекорд: 0</div>
+</div>
+
+<div id="settings" class="screen hidden">
+    <h2>⚙️ Настройки</h2>
+
+    <label>Управление:</label>
+    <select id="controlType">
+        <option value="swipe">Свайпы</option>
+        <option value="tap">Тапы</option>
+    </select>
+
+    <label>Скорость:</label>
+    <select id="speed">
+        <option value="150">Медленно</option>
+        <option value="110" selected>Нормально</option>
+        <option value="70">Быстро</option>
+    </select>
+
+    <button onclick="saveSettings()">Сохранить</button>
+    <button onclick="backMenu()">Назад</button>
+</div>
+
+<canvas id="game"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
